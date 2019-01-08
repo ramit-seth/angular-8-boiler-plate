@@ -1,0 +1,14 @@
+nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  .navbar-brand {
+    color: #b9c1d0;
+  }
+  height: 60px;
+}
+
+.hamburger,
+.logout {
+  color: #b9c1d0;
+  cursor: pointer;
+}

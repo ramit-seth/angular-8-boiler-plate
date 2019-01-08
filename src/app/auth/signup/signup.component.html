@@ -1,0 +1,31 @@
+<div class="container-signup bg-light">
+  <div class="signup-title">Registration Page</div>
+  <form [formGroup]="signupForm" (ngSubmit)="signup()" class="signup-form">
+    <div class="form-group">
+      <label for="firstName"><b>First Name</b></label>
+      <input type="text" id="firstName" formControlName="firstName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="lastName"><b>Last Name</b></label>
+      <input type="text" id="lastName" formControlName="lastName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="email"><b>Email</b></label>
+      <input type="email" id="email" formControlName="email" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="phone"><b>Mobile Number</b></label>
+      <input type="tel" id="phone" formControlName="phone" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="checkbox" id='checkbox'>
+      <label for="checkbox" class="label-checkbox">Agree to terms and conditions</label>
+    </div>
+
+    <div class="signup-btn">
+      <button type="submit" (click)="signup()" class="btn btn-primary">Sign Up</button>
+      <button type="reset" (click)="resetForm()" class="btn btn-secondary">Cancel</button>
+    </div>
+
+  </form>
+</div>

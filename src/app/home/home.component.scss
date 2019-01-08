@@ -1,0 +1,15 @@
+.home-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 60px;
+}
+
+.col-page {
+  grid-column: 2/8;
+}
+
+@media screen and (max-width: 480px) {
+  .col-page {
+    grid-column: 2/4;
+  }
+}

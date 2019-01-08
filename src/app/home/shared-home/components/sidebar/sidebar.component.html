@@ -1,0 +1,25 @@
+<div class="bg-secondary navbar-customization">
+    <nav>
+      <div class="nav-item" (click)="goToDashboard()">
+        <i class="fa fa-cog" tooltip="Dashboard" placement="right"></i>
+        <div *ngIf="isOpen">Dashboard</div>
+      </div>
+  
+      <div class="nav-item" (click)="activateReports()">
+        <i class="fa fa-user" tooltip="Reports" placement="right"></i>
+        <div class="row" *ngIf="isOpen">
+          <span>Reports</span><i class="fa" [ngClass]="{'fa-chevron-up': showReports, 'fa-chevron-down': !showReports}"></i>
+        </div>
+      </div>
+      <div *ngIf="showReports">
+        <div class="nav-item margin-left" (click)="goToReportOne()">
+          <i class="fa fa-list" tooltip="Report 1" placement="right"></i>
+          <div *ngIf="isOpen">Report One</div>
+        </div>
+        <div class="nav-item margin-left" (click)="goToReportTwo()">
+          <i class="fa fa-info-circle" tooltip="Report 2" placement="right"></i>
+          <div *ngIf="isOpen">Report Two</div>
+        </div>
+      </div>
+    </nav>
+  </div>

@@ -1,0 +1,25 @@
+.container-signup {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  .signup-title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .signup-form {
+    padding: 20px;
+    .form-control {
+        display: inline-grid;
+    }
+    .signup-btn {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: auto auto;
+    }
+    .label-checkbox {
+        padding: 0px 10px;
+    }
+
+  }
+}
