@@ -1,131 +1,160 @@
 {
   "rulesDirectory": [
-    "node_modules/codelyzer"
-  ],
+        "ts-lint"
+    ],
   "rules": {
-    "arrow-return-shorthand": true,
-    "callable-types": true,
-    "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
-    "curly": true,
-    "deprecation": {
-      "severity": "warn"
-    },
-    "eofline": true,
-    "forin": true,
-    "import-blacklist": [
-      true,
-      "rxjs/Rx"
-    ],
-    "import-spacing": true,
-    "indent": [
-      true,
-      "spaces"
-    ],
-    "interface-over-type-literal": true,
-    "label-position": true,
-    "max-line-length": [
-      true,
-      140
-    ],
-    "member-access": false,
-    "member-ordering": [
-      true,
-      {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
-      }
-    ],
-    "no-arg": true,
-    "no-bitwise": true,
-    "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ],
-    "no-construct": true,
-    "no-debugger": true,
-    "no-duplicate-super": true,
-    "no-empty": false,
-    "no-empty-interface": true,
-    "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
-    "no-misused-new": true,
-    "no-non-null-assertion": true,
-    "no-redundant-jsdoc": true,
-    "no-shadowed-variable": true,
-    "no-string-literal": false,
-    "no-string-throw": true,
-    "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
-    "no-unnecessary-initializer": true,
-    "no-unused-expression": true,
-    "no-use-before-declare": true,
-    "no-var-keyword": true,
-    "object-literal-sort-keys": false,
-    "one-line": [
-      true,
-      "check-open-brace",
-      "check-catch",
-      "check-else",
-      "check-whitespace"
-    ],
-    "prefer-const": true,
-    "quotemark": [
-      true,
-      "single"
-    ],
-    "radix": true,
-    "semicolon": [
-      true,
-      "always"
-    ],
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
-    "typedef-whitespace": [
-      true,
-      {
-        "call-signature": "nospace",
-        "index-signature": "nospace",
-        "parameter": "nospace",
-        "property-declaration": "nospace",
-        "variable-declaration": "nospace"
-      }
-    ],
-    "unified-signatures": true,
-    "variable-name": false,
-    "whitespace": [
-      true,
-      "check-branch",
-      "check-decl",
-      "check-operator",
-      "check-separator",
-      "check-type"
-    ],
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-life-cycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
+      "no-input-rename": true, // https://angular.io/guide/styleguide#style-05-13
+      "no-input-named-after-standard-event": true,
+      "no-any":true,
+      "member-access": true,
+      "no-output-rename": true,
+      "no-output-named-after-standard-event": true,
+      "max-file-line-count": [true, 400],
+
+      "arrow-return-shorthand": true,
+      "class-name": true, // https://palantir.github.io/tslint/rules/class-name/
+      "component-class-suffix": true,
+      "component-selector": [
+          true,
+          "element",
+          "app",
+          "kebab-case"
+      ],
+      "contextual-life-cycle": true,
+      "curly": true, // https://palantir.github.io/tslint/rules/curly/
+      "directive-class-suffix": true,
+      "directive-selector": [
+          true,
+          "attribute",
+          "app",
+          "camelCase"
+      ],
+      "eofline": true, // https://palantir.github.io/tslint/rules/eofline/
+      "forin": true, /**
+                        https://palantir.github.io/tslint/rules/forin/
+                        Prevents accidental iteration over properties inherited from an object’s prototype. See MDN’s for...in documentation for more information about for...in loops.
+                        Also consider using a Map or Set if you’re storing collections of objects. Using Objects can cause occasional edge case bugs, such as if a key is named “hasOwnProperty”.
+                    */
+      "import-spacing": true,
+      "indent": [
+          true,
+          "spaces"
+      ],
+      "label-position": true,
+      "max-line-length": [
+          true,
+          {
+              "limit": 140,
+              "ignore-pattern": "^import {(.*?)}"
+          }
+      ],
+      "member-ordering": [
+          true,
+          {
+              "order": [
+                "public-static-field",
+                "public-instance-field",
+                "public-constructor",
+                "private-static-field",
+                "private-instance-field",
+                "private-constructor",
+                "public-instance-method",
+                "protected-instance-method",
+                "private-instance-method"
+              ]
+          }
+      ],
+      "no-console": [
+          true,
+          "debug",
+          "info",
+          "time",
+          "timeEnd",
+          "trace",
+          "log"
+      ],
+      "no-construct": true,
+      "no-debugger": true,
+      "no-duplicate-super": true,
+      "no-inferrable-types": [
+          true,
+          "ignore-params"
+      ],
+      "no-irregular-whitespace": true,
+      "no-misused-new": true,
+      "no-output-on-prefix": true,
+      "no-shadowed-variable": true,
+      "no-string-literal": false,
+      "no-string-throw": true,
+      "no-switch-case-fall-through": true,
+      "no-trailing-whitespace": true,
+      "no-unnecessary-initializer": true,
+      "no-unused-expression": true,
+      "no-use-before-declare": true,
+      "no-var-keyword": true,
+      "pipe-impure": true,
+      "prefer-const": true,
+      "quotemark": [
+          true,
+          "single"
+      ],
+      "typedef": [true, "call-signature",
+        "arrow-call-signature",
+        "parameter",
+        "arrow-parameter",
+        "property-declaration",
+        "variable-declaration",
+        "member-variable-declaration",
+        "object-destructuring",
+        "array-destructuring"
+      ],
+      // rxjs
+      // to do tslint rules to be add
+      // "rxjs-no-unsafe-takeuntil": true,
+      // "rxjs-no-unsafe-catch": true,
+      // "rxjs-no-unsafe-switchmap": {
+      //     "options": [{
+      //         "disallow": ["add", "create", "delete", "post", "put", "remove", "set", "update"],
+      //         "observable": "action(s|\\$)?"
+      //     }],
+      //     "severity": "error"
+      // },
+      "semicolon": [
+          true,
+          "always"
+      ],
+      "trackBy-function": true,
+      "triple-equals": [
+          true,
+          "allow-null-check"
+      ],
+      "typedef-whitespace": [
+          true,
+          {
+              "call-signature": "nospace",
+              "index-signature": "nospace",
+              "parameter": "nospace",
+              "property-declaration": "nospace",
+              "variable-declaration": "nospace"
+          }
+      ],
+      "use-host-property-decorator": true,
+      "use-input-property-decorator": true,
+      "use-life-cycle-interface": true,
+      "use-output-property-decorator": true,
+      "use-pipe-transform-interface": true,
+      "variable-name": [
+          true,
+          "check-format",
+          "allow-leading-underscore"
+      ],
+      "whitespace": [
+          true,
+          "check-branch",
+          "check-decl",
+          "check-operator",
+          "check-separator",
+          "check-type"
+      ]
   }
 }
