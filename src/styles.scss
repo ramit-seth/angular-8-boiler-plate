@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-social {
+  background: blue;
+  color: #ffffff;
+  width: 120px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.btn-google {
+//   background: #dd4b39;
+  background: #007bff;
+}
+
+.btn-facebook {
+  background: #3b5998;
+}
+
+.social-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.7;
+}

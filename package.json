@@ -20,11 +20,13 @@
     "@angular/platform-browser": "~7.1.4",
     "@angular/platform-browser-dynamic": "~7.1.4",
     "@angular/router": "~7.1.4",
+    "angular-6-social-login": "^1.1.1",
     "bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
     "ngx-bootstrap": "^3.1.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "twit": "^2.2.11",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
