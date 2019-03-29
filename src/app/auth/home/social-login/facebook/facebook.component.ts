@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { AuthApiService } from "src/app/auth/auth-api.service";
+import { AuthApiService } from "src/app/core/services/auth-api.service";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angular-6-social-login";
 import { CLIENT_IDS } from 'src/app/auth/auth.constants';
 import { Router } from '@angular/router';
