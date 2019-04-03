@@ -10,18 +10,18 @@ import { Router } from '@angular/router';
   styleUrls: ["./facebook.component.scss"]
 })
 export class FacebookComponent implements OnInit {
-
+  FB;
   constructor(private authAPIService: AuthApiService,private router:Router) {}
 
   ngOnInit() {
     (window as any).fbAsyncInit = function() {
-        FB.init({
+        this.FB.init({
           appId      : CLIENT_IDS.FACEBOOK_ID,
           cookie     : true,
           xfbml      : true,
           version    : 'v3.1'
         });
-        FB.AppEvents.logPageView();
+        this.FB.AppEvents.logPageView();
       };
   
       (function(d, s, id){

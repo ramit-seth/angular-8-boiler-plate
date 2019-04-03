@@ -3,8 +3,11 @@
       <div class="nav-item" (click)="goToDashboard()">
         <i class="fa fa-cog" tooltip="Dashboard" placement="right"></i>
         <div *ngIf="isOpen">Dashboard</div>
+      </div> 
+      <div class="nav-item" (click)="goToInputDashboard()">
+        <i class="fa fa-cog" tooltip="Dashboard" placement="right"></i>
+        <div *ngIf="isOpen">Input-Dashboard</div>
       </div>
-  
       <div class="nav-item" (click)="activateReports()">
         <i class="fa fa-user" tooltip="Reports" placement="right"></i>
         <div class="row" *ngIf="isOpen">

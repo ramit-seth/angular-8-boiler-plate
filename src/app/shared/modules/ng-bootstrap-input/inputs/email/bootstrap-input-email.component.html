@@ -1,0 +1,7 @@
+<div class="form-group" [ngClass]="{'has-success':isValid('email'), 'has-danger':hasError('email', null)}">
+	<input type="text" class="form-control" [ngClass]="{'form-control-success':isValid('email'), 'form-control-danger':hasError('email', null)}" id="email"
+		[formControl]="getFormControl()">
+	<div class="form-control-feedback" *ngIf="hasError('email', 'required')">Required</div>
+	<div class="form-control-feedback" *ngIf="hasError('email', 'email') && !hasError('email', 'required')">Invalid Email</div>
+	<small class="form-text text-muted">email@example.com</small>
+</div>

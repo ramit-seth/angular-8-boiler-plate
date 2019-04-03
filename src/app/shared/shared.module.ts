@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AlertModule, TooltipModule } from 'ngx-bootstrap';
 import { DefaultModalComponent } from './components/default-modal/default-modal.component';
+import { BootstrapInputModule } from './modules/ng-bootstrap-input/ng-bootstrap-input';
 
 @NgModule({
   declarations: [DefaultModalComponent],
@@ -13,6 +14,7 @@ import { DefaultModalComponent } from './components/default-modal/default-modal.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BootstrapInputModule,
     AlertModule.forRoot(),
     TooltipModule.forRoot()
   ],
@@ -21,6 +23,7 @@ import { DefaultModalComponent } from './components/default-modal/default-modal.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BootstrapInputModule,
     AlertModule,
     TooltipModule,
     DefaultModalComponent
