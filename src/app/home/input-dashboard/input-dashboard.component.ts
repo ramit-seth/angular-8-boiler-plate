@@ -1,9 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { ValidatorFn, AbstractControl, FormGroup, FormControl, Validators } from "@angular/forms";
-import { BootstrapInputConfigInterface } from 'src/app/shared/modules/ng-bootstrap-input/ng-bootstrap-input';
-import { PASSWORD_MESSAGES } from 'src/app/shared/modules/ng-bootstrap-input/messages/password/password.messages';
-
-
+import { Component, OnInit, OnChanges } from "@angular/core";
+import {
+  ValidatorFn,
+  AbstractControl,
+  FormGroup,
+  FormControl,
+  Validators
+} from "@angular/forms";
+import { BootstrapInputConfigInterface } from "src/app/shared/modules/ng-bootstrap-input/ng-bootstrap-input";
+import { PASSWORD_MESSAGES } from "src/app/shared/modules/ng-bootstrap-input/messages/password/password.messages";
 
 @Component({
   selector: "app-input-dashboard",
@@ -11,15 +15,18 @@ import { PASSWORD_MESSAGES } from 'src/app/shared/modules/ng-bootstrap-input/mes
   styleUrls: ["./input-dashboard.component.scss"]
 })
 export class InputDashboardComponent implements OnInit {
-  appInputConfig: BootstrapInputConfigInterface;
+  appInputNewPasswordConfig: BootstrapInputConfigInterface;
   userForm: FormGroup;
+  isPasswordValid:boolean = false;
   constructor() {}
 
   ngOnInit() {
     this.initialiseForm();
-    this.appInputConfig = {
+
+    // Field New Password
+    this.appInputNewPasswordConfig = {
       type: "text",
-      label: "password",
+      label: "Enter Password",
       name: "password",
       form: this.userForm,
       validationConfig: {
@@ -46,6 +53,15 @@ export class InputDashboardComponent implements OnInit {
         Validators.minLength(8),
         passwordValidator()
       ])
+    });
+
+    this.userForm.statusChanges.subscribe((status:string) => {
+      console.log(status);
+      if(status && status.toLowerCase()=== "valid"){
+        this.isPasswordValid=true;
+      } else {
+        this.isPasswordValid = false;
+      }
     });
   }
 }

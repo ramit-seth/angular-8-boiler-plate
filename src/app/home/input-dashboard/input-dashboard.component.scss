@@ -4,3 +4,47 @@
   display: flex;
   justify-content: center;
 }
+
+.container-password {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  .passowrd-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 230px;
+  }
+  .password-title {
+    text-align: center;
+  }
+  .password-form {
+    padding: 12px;
+    .form-control {
+      display: inline-grid;
+    }
+    .password-btn {
+      display: grid;
+      justify-content: space-evenly;
+      grid-template-columns: auto auto;
+    }
+    .password-valid {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+    .password-invalid {
+      background-color: red;
+      border-color: red;
+    }
+  }
+  .password-icon-wrapper {
+    position: absolute;
+    top: 9.5%;
+    left: 69%;
+    .password-icon-size {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}

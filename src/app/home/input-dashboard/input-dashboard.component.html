@@ -1,7 +1,29 @@
-<div
-  class="custom-input"
->
-  <form [formGroup]="userForm" autocomplete="off">
-    <app-bootstrap-input [inputConfig]="appInputConfig"></app-bootstrap-input>
-  </form>
+<div class="container-password bg-light">
+  <div>
+    <h5 class="password-title">Password Validator</h5>
+    <div class="passowrd-form-wrapper">
+      <form [formGroup]="userForm" autocomplete="off" class="password-form">
+        <app-bootstrap-input
+          [inputConfig]="appInputNewPasswordConfig"
+        ></app-bootstrap-input>
+      </form>
+
+      <div class="password-icon-wrapper">
+        <span *ngIf="isPasswordValid">
+          <img
+            src="../../../assets/icons/valid.png"
+            class="password-icon-size"
+            alt="Valid Password"
+          />
+        </span>
+        <span *ngIf="!isPasswordValid">
+          <img
+            src="../../../assets/icons/invalid.png"
+            class="password-icon-size"
+            alt="Invalid Password"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
