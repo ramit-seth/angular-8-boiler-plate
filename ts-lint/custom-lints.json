@@ -1,0 +1,55 @@
+{
+    "rules": {
+        "no-any":true,
+        "no-output-named-after-standard-event": true,
+        "max-file-line-count": [true, 400],
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                  "public-static-field",
+                  "public-instance-field",
+                  "public-constructor",
+                  "private-static-field",
+                  "private-instance-field",
+                  "private-constructor",
+                  "public-instance-method",
+                  "protected-instance-method",
+                  "private-instance-method"
+                ]
+            }
+        ],
+        "no-console": [
+            true,
+            "debug",
+            "info",
+            "time",
+            "timeEnd",
+            "trace",
+            "log"
+        ],
+        "no-irregular-whitespace": true,
+        "no-unused-expression": true,
+        "pipe-impure": true,
+        "typedef": [true, "call-signature",
+          "arrow-call-signature",
+          "parameter",
+          "arrow-parameter",
+          "property-declaration",
+          "variable-declaration",
+          "member-variable-declaration",
+          "object-destructuring",
+          "array-destructuring"
+        ],
+        "trackBy-function": true,
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ],
+        "variable-name": [
+            true,
+            "check-format",
+            "allow-leading-underscore"
+        ]
+    }
+  }

@@ -1,6 +1,6 @@
 {
   "rulesDirectory": [
-    "node_modules/codelyzer"
+    "ts-lint"
   ],
   "rules": {
     "arrow-return-shorthand": true,
