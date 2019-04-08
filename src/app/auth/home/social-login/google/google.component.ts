@@ -14,12 +14,12 @@ export class GoogleComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSignIn() {
+  onSignIn(): void {
     console.log(GoogleLoginProvider.PROVIDER_ID);
 
     this.authAPIService
       .socialLogin(GoogleLoginProvider.PROVIDER_ID)
-      .then(userData => {
+      .then((userData:any) => {
         if (userData) {
           console.log("Data Received: ", userData);
           localStorage.setItem("userName", userData["name"]);

@@ -1,50 +1,42 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .custom-input {
   text-align: center;
   height: 200px;
-  display: flex;
-  justify-content: center;
+  @include flex();
 }
 
 .container-password {
   display: grid;
   height: 100vh;
   justify-content: center;
-  position: relative;
   .passowrd-form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex();
     max-width: 230px;
+    position: relative;
   }
   .password-title {
     text-align: center;
   }
   .password-form {
     padding: 12px;
-    .form-control {
-      display: inline-grid;
-    }
-    .password-btn {
-      display: grid;
-      justify-content: space-evenly;
-      grid-template-columns: auto auto;
-    }
-    .password-valid {
-      background-color: #28a745;
-      border-color: #28a745;
-    }
-    .password-invalid {
-      background-color: red;
-      border-color: red;
-    }
   }
   .password-icon-wrapper {
     position: absolute;
-    top: 9.5%;
-    left: 69%;
-    .password-icon-size {
-      height: 32px;
-      width: 32px;
+    top: 42.2%;
+    left: 100%;
+  }
+  .password-icon-size {
+    font-size: 24px;
+    .cross {
+      color: #e74e4e;
+    }
+    .tick {
+      color: #0ed80e;
     }
   }
 }

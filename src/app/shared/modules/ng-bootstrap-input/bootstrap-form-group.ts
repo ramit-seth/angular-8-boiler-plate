@@ -1,11 +1,9 @@
-import { FormGroup } from '@angular/forms';
+import { FormGroup } from "@angular/forms";
 
 export class BootstrapFormGroup extends FormGroup {
+  submitted: boolean = false;
 
-    submitted = false;
-
-    setFormSubmitted() {
-        this.submitted = true;
-    }
-
+  setFormSubmitted() {
+    this.submitted = true;
+  }
 }

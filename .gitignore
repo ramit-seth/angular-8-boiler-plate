@@ -7,6 +7,7 @@
 
 # dependencies
 /node_modules
+/ts-lint
 package-lock.json
 
 # IDEs and editors

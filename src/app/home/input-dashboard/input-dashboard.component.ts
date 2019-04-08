@@ -17,7 +17,7 @@ import { PASSWORD_MESSAGES } from "src/app/shared/modules/ng-bootstrap-input/mes
 export class InputDashboardComponent implements OnInit {
   appInputNewPasswordConfig: BootstrapInputConfigInterface;
   userForm: FormGroup;
-  isPasswordValid:boolean = false;
+  isPasswordValid: boolean = false;
   constructor() {}
 
   ngOnInit() {
@@ -55,10 +55,10 @@ export class InputDashboardComponent implements OnInit {
       ])
     });
 
-    this.userForm.statusChanges.subscribe((status:string) => {
+    this.userForm.statusChanges.subscribe((status: string) => {
       console.log(status);
-      if(status && status.toLowerCase()=== "valid"){
-        this.isPasswordValid=true;
+      if (status && status.toLowerCase() === "valid") {
+        this.isPasswordValid = true;
       } else {
         this.isPasswordValid = false;
       }
@@ -68,10 +68,10 @@ export class InputDashboardComponent implements OnInit {
 
 export function passwordValidator(): ValidatorFn {
   let passwordErrorArray: Array<any> = [];
-  const lowerCase = new RegExp(/[a-z]/);
-  const upperCase = new RegExp(/[A-Z]/);
-  const haveNumber = new RegExp(/[0-9]/);
-  const specialChar = new RegExp(/[*$@!#%&()^~{}]+/);
+  const lowerCase: RegExp = new RegExp(/[a-z]/);
+  const upperCase: RegExp = new RegExp(/[A-Z]/);
+  const haveNumber: RegExp = new RegExp(/[0-9]/);
+  const specialChar: RegExp = new RegExp(/[*$@!#%&()^~{}]+/);
 
   return (control: AbstractControl): { [key: string]: any } | null => {
     passwordErrorArray = [];
@@ -101,7 +101,7 @@ export function passwordValidator(): ValidatorFn {
   };
 }
 
-export function pushErrorMessage(errMsgArray: Array<any>, errorMessage: any) {
+export function pushErrorMessage(errMsgArray: Array<any>, errorMessage: any): void {
   if (!errMsgArray.includes(errorMessage)) {
     errMsgArray.push(errorMessage);
   }

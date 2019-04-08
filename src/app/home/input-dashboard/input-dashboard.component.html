@@ -9,19 +9,11 @@
       </form>
 
       <div class="password-icon-wrapper">
-        <span *ngIf="isPasswordValid">
-          <img
-            src="../../../assets/icons/valid.png"
-            class="password-icon-size"
-            alt="Valid Password"
-          />
+        <span *ngIf="isPasswordValid" class="password-icon-size">
+            <i class="fas fa-check-circle tick"></i>
         </span>
-        <span *ngIf="!isPasswordValid">
-          <img
-            src="../../../assets/icons/invalid.png"
-            class="password-icon-size"
-            alt="Invalid Password"
-          />
+        <span *ngIf="!isPasswordValid" class="password-icon-size">
+            <i class="fas fa-times-circle cross"></i>
         </span>
       </div>
     </div>

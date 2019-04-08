@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   public logout(): void {
     if (localStorage.getItem("userName")) {
-      this.authAPIService.signOut().then(data => {
+      this.authAPIService.signOut().then(() => {
         console.log("Logged out successfully.");
         localStorage.clear();
       });
