@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  userName:string;
   constructor() { }
 
   ngOnInit() {
+    if (localStorage.getItem("userName")) {
+      this.userName = localStorage.getItem("userName");
+    }
   }
 
 }

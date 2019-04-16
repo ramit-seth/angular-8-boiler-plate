@@ -1,0 +1,30 @@
+<div class="form-group" [class.has-error]="hasError()">
+  <label
+    *ngIf="getFormControlLabel()"
+    for="{{ this.inputConfig.name }}"
+    class="control-label"
+    >{{ this.getFormControlLabel() }}</label
+  >
+  <input
+    id="{{ this.inputConfig.name }}"
+    class="form-control"
+    type="text"
+    lang="en"
+    [formControl]="getFormControl()"
+  />
+  <div>
+    <div
+      class="formio-errors position-right"
+      *ngIf="hasError()"
+    >
+      <p class="help-block" *ngFor="let msg of errorMsgArray">{{ msg }}</p>
+    </div>
+  </div>
+</div>
+
+<!--     display: inline-flex;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%; -->

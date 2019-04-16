@@ -1,0 +1,12 @@
+<div class="form-group" [ngClass]="{'has-success':isValid(), 'has-danger':hasError()}">
+	<label *ngIf="inputConfig.dataConfig.label">{{ inputConfig.dataConfig.label }}</label>
+	<select class="form-control"
+		[formControl]="getFormControl()">
+		<option *ngIf="inputConfig.dataConfig.placeholder" value="">{{ inputConfig.dataConfig.placeholder }}</option>
+        <option *ngFor="let option of inputConfig.dataConfig.options">
+					{{ option }}
+		</select>			
+	<div class="form-control-feedback" *ngIf="hasError()">{{inputConfig.validationConfig.errorMessage}}</div>
+</div>
+
+

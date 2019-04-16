@@ -20,6 +20,11 @@ export class SidebarComponent implements OnInit {
     this.router.navigate(['home/dashboard']);
   }
 
+  public goToInputDashboard(): void {
+    this.showReports = false;
+    this.router.navigate(['home/input-dashboard']);
+  }
+
   public goToReportOne(): void {
     this.router.navigate(['home/reports/report-one']);
   }

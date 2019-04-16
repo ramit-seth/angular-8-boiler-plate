@@ -13,7 +13,9 @@ This is an Angular 7 BoilerPlate app that includes -
 
 ## Installatation Instructions
 
-Open base folder with the name angular-7-boiler-plate in command prompt or terminal and then run `npm i` to install all the dependencies.
+1. Open base folder with the name angular-7-boiler-plate in command prompt or terminal and then run `npm i` to install all the dependencies.
+2. Run this command to install third party module for social login.
+    `npm install angular-6-social-login --save`
 
 ## Run Development server
 

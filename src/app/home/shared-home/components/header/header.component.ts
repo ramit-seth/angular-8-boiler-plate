@@ -1,17 +1,17 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthApiService } from "src/app/core/services/auth-api.service";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-
   @Input() isOpen: boolean;
   @Output() toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authAPIService: AuthApiService) {}
 
   ngOnInit() {}
 
@@ -20,7 +20,12 @@ export class HeaderComponent implements OnInit {
   }
 
   public logout(): void {
-    this.router.navigate(['auth/login']);
+    if (localStorage.getItem("userName")) {
+      this.authAPIService.signOut().then(() => {
+        console.log("Logged out successfully.");
+        localStorage.clear();
+      });
+    }
+    this.router.navigate(["auth/login"]);
   }
-
 }

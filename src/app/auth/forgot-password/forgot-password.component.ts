@@ -20,7 +20,6 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   public forgot(): void {
-    console.log(this.forgotForm.value);
     this.router.navigate(['auth/login']);
   }
 

@@ -1,0 +1,42 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-input {
+  text-align: center;
+  height: 200px;
+  @include flex();
+}
+
+.container-password {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  .passowrd-form-wrapper {
+    @include flex();
+    max-width: 230px;
+    position: relative;
+  }
+  .password-title {
+    text-align: center;
+  }
+  .password-form {
+    padding: 12px;
+  }
+  .password-icon-wrapper {
+    position: absolute;
+    top: 42.2%;
+    left: 100%;
+  }
+  .password-icon-size {
+    font-size: 24px;
+    .cross {
+      color: #e74e4e;
+    }
+    .tick {
+      color: #0ed80e;
+    }
+  }
+}

@@ -8,6 +8,6 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [HeaderComponent, SidebarComponent, FooterComponent],
   imports: [SharedModule],
-  exports: [HeaderComponent, SidebarComponent, FooterComponent]
+  exports: [HeaderComponent, SidebarComponent, FooterComponent,SharedModule]
 })
 export class SharedHomeModule {}

@@ -1,0 +1,21 @@
+<div class="container-password bg-light">
+  <div>
+    <h5 class="password-title">Password Validator</h5>
+    <div class="passowrd-form-wrapper">
+      <form [formGroup]="userForm" autocomplete="off" class="password-form">
+        <app-bootstrap-input
+          [inputConfig]="appInputNewPasswordConfig"
+        ></app-bootstrap-input>
+      </form>
+
+      <div class="password-icon-wrapper">
+        <span *ngIf="isPasswordValid" class="password-icon-size">
+            <i class="fas fa-check-circle tick"></i>
+        </span>
+        <span *ngIf="!isPasswordValid" class="password-icon-size">
+            <i class="fas fa-times-circle cross"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

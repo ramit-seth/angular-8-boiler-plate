@@ -1,0 +1,11 @@
+export const CLIENT_IDS = {
+  GOOGLE_ID:
+    "459485045205-7ua7jrun7krsscfkookmor4leqjmi5s4.apps.googleusercontent.com",
+  FACEBOOK_ID: "365387637391875",
+  TWITTER_IDS: {
+    CONSUMER_KEY: "aOKQBaHL9CU1RBW2H9Vm8XlS3",
+    CONSUMER_SECRET: "w4Nt4VlyBotO3e01tdtqAoPRSuxmqlF8nRArydy7zyz1cay84s",
+    ACCESS_TOKEN: "1110843965660499969-uiw21f4gqHzyVZMi8uUXiMfFpm7tgb",
+    ACCESS_TOKEN_SECRET: "fSYIEIZjvvq7WCp7FVhoKROjIPhxYUNHwqCihC7NuPBHS"
+  }
+};

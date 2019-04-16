@@ -1,15 +1,26 @@
 <alert type="danger" *ngIf="showAlert">
-    Please enter a valid username/password and try submitting again.
+  Please enter a valid username/password and try submitting again.
 </alert>
-<div class="container-login bg-light">
+
+<div class="normal-login">
   <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
     <div class="form-group">
       <label for="username"><b>Username</b></label>
-      <input type="text" id="username" formControlName="username" class="form-control" />
+      <input
+        type="text"
+        id="username"
+        formControlName="username"
+        class="form-control"
+      />
     </div>
     <div class="form-group">
       <label for="password"><b>Password</b></label>
-      <input type="password" id="password" formControlName="password" class="form-control" />
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        class="form-control"
+      />
     </div>
     <div class="forgot">
       <a tabindex (click)="goToForgot()">Forgot Password?</a>
@@ -19,6 +30,6 @@
     </div>
   </form>
   <div class="signup">
-      <a tabindex (click)="goToSignup()">Click here to Sign Up</a>
-    </div>
+    <a tabindex (click)="goToSignup()">Click here to Sign Up</a>
+  </div>
 </div>

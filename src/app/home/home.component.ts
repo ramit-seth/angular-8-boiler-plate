@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  userName:string;
   public isOpen: boolean;
   constructor() {}
 
   ngOnInit(): void {
     this.isOpen = true;
+    if(localStorage.getItem("userName")){
+      this.userName = localStorage.getItem("userName");
+    }
   }
 
   public toggleSidebar(event: boolean): void {
