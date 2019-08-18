@@ -2,8 +2,8 @@
 
 ## Introduction
 
-This is an Angular 7 BoilerPlate app that includes -
-1. Skeleton and starter pack for making Angular 7 apps
+This is an Angular 8 BoilerPlate app that includes -
+1. Skeleton and starter pack for making Angular 8 apps
 2. Most Commonly used Pages like - login, signup, home, dashboard, etc.
 3. Responsive structure and design using the CSS Grid Layout Module
 4. Feature Modules (Auth, Home and Reports) with routing and hierarchical lazy loading implemented
@@ -13,7 +13,7 @@ This is an Angular 7 BoilerPlate app that includes -
 
 ## Installatation Instructions
 
-Open base folder with the name angular-7-boiler-plate in command prompt or terminal and then run `npm i` to install all the dependencies.
+Open base folder with the name angular-8-boiler-plate in command prompt or terminal and then run `npm i` to install all the dependencies.
 
 ## Run Development server
 
