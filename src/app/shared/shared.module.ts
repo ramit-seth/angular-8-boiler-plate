@@ -5,9 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AlertModule, TooltipModule } from 'ngx-bootstrap';
 import { DefaultModalComponent } from './components/default-modal/default-modal.component';
+import { AutoFocusDirective } from './directives/auto-focus.directive';
 
 @NgModule({
-  declarations: [DefaultModalComponent],
+  declarations: [DefaultModalComponent, AutoFocusDirective],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -23,7 +24,8 @@ import { DefaultModalComponent } from './components/default-modal/default-modal.
     ReactiveFormsModule,
     AlertModule,
     TooltipModule,
-    DefaultModalComponent
+    DefaultModalComponent,
+    AutoFocusDirective
   ]
 })
 export class SharedModule {}
